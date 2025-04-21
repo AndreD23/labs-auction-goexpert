@@ -13,8 +13,8 @@
 
 1. Clone o repositório:
 ```bash
-git clone <url-do-repositório>
-cd fullcycle-auction_go
+git clone https://github.com/AndreD23/labs-auction-goexpert
+cd labs-auction-goexpert
 ```
 
 2. Crie o arquivo de configuração `.env`:
