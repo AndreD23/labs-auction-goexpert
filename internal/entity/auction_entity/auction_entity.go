@@ -75,4 +75,6 @@ type AuctionRepositoryInterface interface {
 
 	FindAuctionById(
 		ctx context.Context, id string) (*Auction, *internal_error.InternalError)
+
+	CloseAuctions(ctx context.Context, auctions []Auction) *internal_error.InternalError
 }
