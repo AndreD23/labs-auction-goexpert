@@ -25,7 +25,7 @@ type BidOutputDTO struct {
 }
 
 type BidUseCase struct {
-	BidRepository bid_entity.BidEntityRepository
+	BidRepository bid_entity.BidEntityRepositoryInterface
 
 	timer               *time.Timer
 	maxBatchSize        int
@@ -33,7 +33,7 @@ type BidUseCase struct {
 	bidChannel          chan bid_entity.Bid
 }
 
-func NewBidUseCase(bidRepository bid_entity.BidEntityRepository) BidUseCaseInterface {
+func NewBidUseCase(bidRepository bid_entity.BidEntityRepositoryInterface) BidUseCaseInterface {
 	maxSizeInterval := getMaxBatchSizeInterval()
 	maxBatchSize := getMaxBatchSize()
 

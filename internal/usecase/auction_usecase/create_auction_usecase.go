@@ -54,7 +54,7 @@ type AuctionUseCaseInterface interface {
 
 func NewAuctionUseCase(
 	auctionRepositoryInterface auction_entity.AuctionRepositoryInterface,
-	bidRepositoryInterface bid_entity.BidEntityRepository) AuctionUseCaseInterface {
+	bidRepositoryInterface bid_entity.BidEntityRepositoryInterface) AuctionUseCaseInterface {
 
 	interval := getBatchAuctionInterval()
 	batchSize := getBatchSize()
@@ -79,7 +79,7 @@ type AuctionStatus int64
 
 type AuctionUseCase struct {
 	auctionRepositoryInterface auction_entity.AuctionRepositoryInterface
-	bidRepositoryInterface     bid_entity.BidEntityRepository
+	bidRepositoryInterface     bid_entity.BidEntityRepositoryInterface
 	timer                      *time.Timer
 	maxAuctionBatchSize        int
 	closeTimeInterval          time.Duration
